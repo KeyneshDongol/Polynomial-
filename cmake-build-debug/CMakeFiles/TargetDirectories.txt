@@ -1,0 +1,3 @@
+/Users/keyneshdongol/Desktop/Polynomial_Operator/cmake-build-debug/CMakeFiles/Polynomial.dir
+/Users/keyneshdongol/Desktop/Polynomial_Operator/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/keyneshdongol/Desktop/Polynomial_Operator/cmake-build-debug/CMakeFiles/rebuild_cache.dir
