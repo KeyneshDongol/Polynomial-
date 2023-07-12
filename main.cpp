@@ -8,7 +8,7 @@
 //#define EIGEN_USE_BLAS
 
 #include <iostream>
-#include "Polynomial/Polynomial.hpp"
+#include "Polynomial.hpp"
 //#include <Eigen/Dense>
 //#include <typeinfo>
 #include <chrono>
