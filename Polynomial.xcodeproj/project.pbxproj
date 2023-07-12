@@ -6,10 +6,6 @@
 	objectVersion = 56;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		D1288FB12A5D536000C5F8CA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1288FB02A5D52DE00C5F8CA /* main.cpp */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		D16EAA4429C0791800D7E1C2 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -23,9 +19,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D1288FAE2A5D52DE00C5F8CA /* Polynomial.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Polynomial.hpp; sourceTree = "<group>"; };
-		D1288FB02A5D52DE00C5F8CA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		D1288FB22A5D53CF00C5F8CA /* Polynomial Operator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Polynomial Operator"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1288FB22A5D53CF00C5F8CA /* Polynomial Operator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = "Polynomial Operator"; path = "/Users/keyneshdongol/Desktop/Polynomial_Operator/build/Debug/Polynomial Operator"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,20 +33,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D1288FAC2A5D52DE00C5F8CA /* Polynomial */ = {
-			isa = PBXGroup;
-			children = (
-				D1288FAE2A5D52DE00C5F8CA /* Polynomial.hpp */,
-				D1288FB02A5D52DE00C5F8CA /* main.cpp */,
-			);
-			path = Polynomial;
-			sourceTree = "<group>";
-		};
 		D16EAA3D29C0791800D7E1C2 = {
 			isa = PBXGroup;
 			children = (
-				D1288FAC2A5D52DE00C5F8CA /* Polynomial */,
-				D1288FB22A5D53CF00C5F8CA /* Polynomial Operator */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,7 +96,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1288FB12A5D536000C5F8CA /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

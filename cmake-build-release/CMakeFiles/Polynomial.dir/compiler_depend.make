@@ -790,7 +790,7 @@ CMakeFiles/Polynomial.dir/main.cpp.o: /Users/keyneshdongol/Desktop/Polynomial_Op
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/_types/_nl_item.h \
   /opt/homebrew/Cellar/llvm/16.0.6/include/c++/v1/__bsd_locale_defaults.h \
   /opt/homebrew/Cellar/llvm/16.0.6/include/c++/v1/cstdarg \
-  /Users/keyneshdongol/Desktop/Polynomial_Operator/Polynomial/Polynomial.hpp \
+  /Users/keyneshdongol/Desktop/Polynomial_Operator/Polynomial.hpp \
   /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/Dense \
   /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/Core \
   /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
@@ -1263,8 +1263,6 @@ CMakeFiles/Polynomial.dir/main.cpp.o: /Users/keyneshdongol/Desktop/Polynomial_Op
 
 /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/Dense:
 
-/Users/keyneshdongol/Desktop/Polynomial_Operator/Polynomial/Polynomial.hpp:
-
 /opt/homebrew/Cellar/llvm/16.0.6/include/c++/v1/__bsd_locale_defaults.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/_wctype.h:
@@ -1304,6 +1302,10 @@ CMakeFiles/Polynomial.dir/main.cpp.o: /Users/keyneshdongol/Desktop/Polynomial_Op
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_blkcnt_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_caddr_t.h:
+
+/opt/homebrew/Cellar/llvm/16.0.6/include/c++/v1/__algorithm/remove_if.h:
+
+/Users/keyneshdongol/Desktop/Polynomial_Operator/Polynomial.hpp:
 
 /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/LU/InverseImpl.h:
 
@@ -1846,8 +1848,6 @@ CMakeFiles/Polynomial.dir/main.cpp.o: /Users/keyneshdongol/Desktop/Polynomial_Op
 /opt/homebrew/Cellar/llvm/16.0.6/include/c++/v1/__iterator/wrap_iter.h:
 
 /opt/homebrew/Cellar/llvm/16.0.6/include/c++/v1/__format/enable_insertable.h:
-
-/opt/homebrew/Cellar/llvm/16.0.6/include/c++/v1/__algorithm/remove_if.h:
 
 /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h:
 
