@@ -52,7 +52,7 @@ int main(int argc, const char * argv[]) {
 //        std::cout << c(0,0) << std::endl;
 //    }
 //    return 0;
-    int n = 5;
+    int n = 10;
     std::vector<double> myList;
      
     for (int i=0; i < n ; i++) {
@@ -66,10 +66,10 @@ int main(int argc, const char * argv[]) {
         
         //
         //    Eigen::Matrix<double, 3, 50> random = Eigen::Matrix<double, 3, 50>::Random();
-        const int numVar = 4;
-        const int nDataPoints = 5;
+        const int numVar = 3;
+        const int nDataPoints = 5000;
         Eigen::Matrix<double,Eigen::Dynamic,Eigen::Dynamic> random = Eigen::Matrix<double,Eigen::Dynamic,Eigen::Dynamic>::Random(numVar, nDataPoints);
-        std::cout << random << "\n";
+//        std::cout << random << "\n";
         Polynomial<3> poly33(coeff);
         //    std::cout << poly33 <<"\n";
         
@@ -78,7 +78,7 @@ int main(int argc, const char * argv[]) {
         Eigen::Matrix<double, 3, 1> A_,a_;
         A_ = Eigen::Matrix<double, 3, 1>::Ones();
         a_ = Eigen::Matrix<double, 3, 1>::Ones();
-        std::cout << poly33.reductionOperator(A_, a_)<< "\n";
+//        std::cout << poly33.reductionOperator(A_, a_)<< "\n";
         //
         ////
         //    Eigen::Matrix<double, 2, 1> random2 = Eigen::Matrix<double, 2, 1>::Ones();

@@ -14,4 +14,4 @@ add_executable(Polynomial main.cpp)
 #endif()
 
 #target_link_libraries(Polynomial /opt/homebrew/Cellar/llvm/16.0.6/lib/ -lomp)
-#This i sTThis i sThios  This Thuis This This This
+
