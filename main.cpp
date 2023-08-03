@@ -36,22 +36,8 @@ int main(int argc, const char * argv[]) {
     using std::chrono::high_resolution_clock;
     using std::chrono::duration_cast;
     using std::chrono::duration;
-    using std::chrono::milliseconds;
-    
+    using std::chrono::nanoseconds;
 
-
-//    while (true)
-//    {
-//        Eigen::Matrix<double,Eigen::Dynamic,Eigen::Dynamic> a;
-//        a.resize(2000, 2000);
-//        a.setRandom();
-//        Eigen::Matrix<double,Eigen::Dynamic,Eigen::Dynamic> b;
-//        b.resize(2000, 2000);
-//        b.setRandom();
-//        Eigen::Matrix<double,Eigen::Dynamic,Eigen::Dynamic> c = a * b;
-//        std::cout << c(0,0) << std::endl;
-//    }
-//    return 0;
     int n = 10;
     std::vector<double> myList;
      
@@ -134,14 +120,14 @@ int main(int argc, const char * argv[]) {
         //    auto ms_int = duration_cast<milliseconds>(t2 - t1);
         
         //     Getting number of milliseconds as a double.
-        duration<double, std::milli> ms_double = t2 - t1;
+        duration<double, std::nano> ms_double = t2 - t1;
         
         
         myList.push_back(ms_double.count());
         
     }
 
-    for (std::vector<int>::size_type i = 0; i < myList.size(); i++) {
+    for (std::vector<int>::size_type i{}; i != myList.size(); ++i) {
         std::cout << myList.at(i) << ' '<< "\n";
     }
     auto result = std::reduce(myList.begin(), myList.end())/n;
