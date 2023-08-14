@@ -7,7 +7,7 @@ project(Polynomial)
 
 include_directories(${EIGEN_DIR})
 
-add_executable(Polynomial main.cpp)
+add_executable(Polynomial main.cpp Polynomial.hpp CompanionMatrix.h SparseFunction.h SparseFunctionStruct.h BasisFunctionsSets.h)
 #find_package(OpenMP)
 #if(OpenMP_CXX_FOUND)
 #    target_link_libraries(Polynomial PUBLIC OpenMP::OpenMP_CXX)

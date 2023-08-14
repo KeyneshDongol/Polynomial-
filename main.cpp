@@ -7,15 +7,20 @@
 
 //#define EIGEN_USE_BLAS
 
+
+
+/
 #include <iostream>
 #include "Polynomial.hpp"
-//#include <Eigen/Dense>
-//#include <typeinfo>
+#include "SparseFunction.h"
+#include "BasisFunctionsSets.h"
 #include <chrono>
 #include <vector>
 #include <numeric>
 #include <utility>
 
+
+ /*
 using namespace std::chrono_literals;
 
 
@@ -36,7 +41,7 @@ int main(int argc, const char * argv[]) {
     using std::chrono::high_resolution_clock;
     using std::chrono::duration_cast;
     using std::chrono::duration;
-    using std::chrono::nanoseconds;
+    using std::chrono::microseconds;
 
     int n = 10;
     std::vector<double> myList;
@@ -120,7 +125,7 @@ int main(int argc, const char * argv[]) {
         //    auto ms_int = duration_cast<milliseconds>(t2 - t1);
         
         //     Getting number of milliseconds as a double.
-        duration<double, std::nano> ms_double = t2 - t1;
+        duration<double, std::micro> ms_double = t2 - t1;
         
         
         myList.push_back(ms_double.count());
@@ -131,12 +136,34 @@ int main(int argc, const char * argv[]) {
         std::cout << myList.at(i) << ' '<< "\n";
     }
     auto result = std::reduce(myList.begin(), myList.end())/n;
-    std::cout << "The average time to run the script is :" << result << "\n";
+    std::cout << "The average time to run the script is :" << result << "ms\n";
 //    std::cout << ms_int.count() << "ms\n";
 //    std::cout << ms_double.count() << "ms\n";
-    
+
+
+
+//
+//    const int order = 4, numVar = 3;
+//    sparseFunction <order,numVar,TaylorBasis> bla;
+//
     return 0;
 }
+ */
+
+
+ int main() {
+
+     const int order = 4, numVar = 3;
+     sparseFunction<order, numVar, TaylorBasis> bla;
+
+
+
+
+     return 0;
+ }
+
+
+
 
 
 
