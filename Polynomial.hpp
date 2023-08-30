@@ -455,6 +455,8 @@ public:
         Eigen::Matrix<double,3,1> newMatrix ({{row(1)},{row(2)},{row(0)}});
         return newMatrix;
     }
+
+
     
     template <typename Derived, typename DerivedOther> Polynomial<1> reductionOperator(const Eigen::MatrixBase<Derived>& A_, const Eigen::MatrixBase<DerivedOther>& a_){
         //A_,a_ are both 3x1 Eigen Column Vector

@@ -1,11 +1,4 @@
 //
-// Created by Keynesh Dongol on 13/8/23.
-//
-
-#ifndef POLYNOMIAL_SPARSEFUNCTIONSTRUCT_H
-#define POLYNOMIAL_SPARSEFUNCTIONSTRUCT_H
-
-//
 //  SparseFunctionStruct.hpp
 //  SparseFunctions
 //
@@ -57,12 +50,13 @@
 //                 This object instead will contain all the subobjects for which the first variable has at most order maxOrder - 1
 //  This nesting structure ends when the order of the last variable is determined. In that case the innermost object stores the value of the coefficient.
 
+#pragma once
+
 
 #include <vector>
 #include <Eigen/Dense>
 #include <cassert>
 #include <iostream>
-#include <memory>
 //#include <ranges>  // used for std::views::drop
 
 
@@ -96,10 +90,10 @@ namespace SparseFunction {
         template <template<int> typename basisType>
         struct sparseFunctionStruct<0, 0, 1, basisType>{
 //===================
-            double coeff{};     // c_[0,...] where ... is calling order list
+            double coeff;     // c_[0,...] where ... is calling order list
 //===================
 //~~~~ Constants
-            constexpr static size_t      numBasisFunction(size_t n){
+            constexpr static int       numBasisFunction(int n){
                 return n+1;
             }
 //~~~~ Construction/Assignment
@@ -140,7 +134,7 @@ namespace SparseFunction {
             RestType rest;
 //===================
 //~~~~ Constants
-            constexpr static size_t       numBasisFunction(size_t n){
+            constexpr static int       numBasisFunction(int n){
                 return RestType::numBasisFunction(n)+1;
             }
 //~~~~ Construction/Assignment
@@ -186,7 +180,7 @@ namespace SparseFunction {
             TopType top;
 //===================
 //~~~~ Constants
-            constexpr static size_t       numBasisFunction(size_t n){
+            constexpr static int       numBasisFunction(int n){
                 return TopType::numBasisFunction(n);
             }
 //~~~~ Construction/Assignment
@@ -230,7 +224,7 @@ namespace SparseFunction {
             RestType rest;
 //===================
 //~~~~ Constants
-            constexpr static size_t       numBasisFunction(size_t n){
+            constexpr static int       numBasisFunction(int n){
                 return TopType::numBasisFunction(RestType::numBasisFunction(n));
             }
 //~~~~ Construction/Assignment
@@ -272,10 +266,3 @@ namespace SparseFunction {
     } // namespace Internal
 
 } // namespace SparseFunction
-
-
-
-
-
-
-#endif //POLYNOMIAL_SPARSEFUNCTIONSTRUCT_H

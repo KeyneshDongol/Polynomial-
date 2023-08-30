@@ -1,17 +1,34 @@
-#set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fopenmp")
+cmake_minimum_required(VERSION 3.25.2)
 
-cmake_minimum_required(VERSION 3.10)
-set(EIGEN_DIR /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3)
+#set(CMAKE_C_COMPILER "gcc-13.1.0")
+#set(CMAKE_CXX_COMPILER "/opt/homebrew/Cellar/gcc/13.1.0/bin/g++13")
+project(Modern_CPP)
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++20")
 
-project(Polynomial)
+if(NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE Release)
+endif()
 
-include_directories(${EIGEN_DIR})
+set(CMAKE_CXX_FLAGS "-Wall -Wextra")
+set(CMAKE_CXX_FLAGS_DEBUG "-g")
+set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 
-add_executable(Polynomial main.cpp Polynomial.hpp CompanionMatrix.h SparseFunction.h SparseFunctionStruct.h BasisFunctionsSets.h)
-#find_package(OpenMP)
-#if(OpenMP_CXX_FOUND)
-#    target_link_libraries(Polynomial PUBLIC OpenMP::OpenMP_CXX)
-#endif()
+set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR})
+find_package(Eigen3 REQUIRED)
+include_directories(${EIGEN3_INCLUDE_DIR})
 
-#target_link_libraries(Polynomial /opt/homebrew/Cellar/llvm/16.0.6/lib/ -lomp)
+set(Boost_USE_STATIC_LIBS OFF)
+set(Boost_USE_MULTITHREADED ON)
+set(Boost_USE_STATIC_RUNTIME OFF)
+find_package(Boost 1.82.0)
+
+if(Boost_FOUND)
+    include_directories(${Boost_INCLUDE_DIRS})
+    add_executable(Polynomial main.cpp Polynomial.hpp CompanionMatrix.h SparseFunction.h SparseFunctionStruct.h BasisFunctionsSets.h Vector.h Math.h
+            Timer.h)
+    target_link_libraries(Polynomial ${Boost_LIBRARIES})
+endif()
+
+
 

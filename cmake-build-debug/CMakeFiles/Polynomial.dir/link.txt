@@ -1,1 +1,1 @@
-/opt/homebrew/Cellar/llvm/16.0.6/bin/clang++ -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/Polynomial.dir/main.cpp.o -o Polynomial 
+/opt/homebrew/Cellar/llvm/16.0.6/bin/clang++ -Wall -Wextra -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/Polynomial.dir/main.cpp.o -o Polynomial 

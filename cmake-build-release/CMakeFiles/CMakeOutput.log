@@ -276,3 +276,140 @@ Parsed CXX OpenMP implicit link information from above output:
   implicit fwks: [/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks]
 
 
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
+Change Dir: /Users/keyneshdongol/Desktop/Polynomial_Operator/cmake-build-release/CMakeFiles/CMakeScratch/TryCompile-r9RkHs
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_4a86c/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_4a86c.dir/build.make CMakeFiles/cmTC_4a86c.dir/build
+Building C object CMakeFiles/cmTC_4a86c.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_4a86c.dir/src.c.o -MF CMakeFiles/cmTC_4a86c.dir/src.c.o.d -o CMakeFiles/cmTC_4a86c.dir/src.c.o -c /Users/keyneshdongol/Desktop/Polynomial_Operator/cmake-build-release/CMakeFiles/CMakeScratch/TryCompile-r9RkHs/src.c
+Linking C executable cmTC_4a86c
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4a86c.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names --verbose  CMakeFiles/cmTC_4a86c.dir/src.c.o -o cmTC_4a86c 
+Apple clang version 14.0.3 (clang-1403.0.22.14.1)
+Target: arm64-apple-darwin22.5.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 13.0.0 13.3 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o cmTC_4a86c -search_paths_first -headerpad_max_install_names CMakeFiles/cmTC_4a86c.dir/src.c.o -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+
+Determining if the function dgemm_ exists passed with the following output:
+Change Dir: /Users/keyneshdongol/Desktop/Polynomial_Operator/cmake-build-release/CMakeFiles/CMakeScratch/TryCompile-mYnpWb
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_866ae/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_866ae.dir/build.make CMakeFiles/cmTC_866ae.dir/build
+Building C object CMakeFiles/cmTC_866ae.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=dgemm_ -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_866ae.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_866ae.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_866ae.dir/CheckFunctionExists.c.o -c /Users/keyneshdongol/Desktop/Polynomial_Operator/cmake-build-release/CMakeFiles/CMakeScratch/TryCompile-mYnpWb/CheckFunctionExists.c
+Linking C executable cmTC_866ae
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_866ae.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=dgemm_ -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names --verbose  CMakeFiles/cmTC_866ae.dir/CheckFunctionExists.c.o -o cmTC_866ae  -Xlinker -framework -Xlinker Accelerate 
+Apple clang version 14.0.3 (clang-1403.0.22.14.1)
+Target: arm64-apple-darwin22.5.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 13.0.0 13.3 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o cmTC_866ae -search_paths_first -headerpad_max_install_names CMakeFiles/cmTC_866ae.dir/CheckFunctionExists.c.o -framework Accelerate -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a
+
+
+
+Determining if the function cheev_ exists passed with the following output:
+Change Dir: /Users/keyneshdongol/Desktop/Polynomial_Operator/cmake-build-release/CMakeFiles/CMakeScratch/TryCompile-TxGYnO
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_315d1/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_315d1.dir/build.make CMakeFiles/cmTC_315d1.dir/build
+Building C object CMakeFiles/cmTC_315d1.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_ -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_315d1.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_315d1.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_315d1.dir/CheckFunctionExists.c.o -c /Users/keyneshdongol/Desktop/Polynomial_Operator/cmake-build-release/CMakeFiles/CMakeScratch/TryCompile-TxGYnO/CheckFunctionExists.c
+Linking C executable cmTC_315d1
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_315d1.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=cheev_ -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names --verbose  CMakeFiles/cmTC_315d1.dir/CheckFunctionExists.c.o -o cmTC_315d1  -Xlinker -framework -Xlinker Accelerate -lm -ldl 
+Apple clang version 14.0.3 (clang-1403.0.22.14.1)
+Target: arm64-apple-darwin22.5.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 13.0.0 13.3 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o cmTC_315d1 -search_paths_first -headerpad_max_install_names CMakeFiles/cmTC_315d1.dir/CheckFunctionExists.c.o -framework Accelerate -lm -ldl -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a
+
+
+
+Performing C++ SOURCE FILE Test COMPILER_HAS_HIDDEN_VISIBILITY succeeded with the following output:
+Change Dir: /Users/keyneshdongol/Desktop/Polynomial_Operator/cmake-build-release/CMakeFiles/CMakeScratch/TryCompile-svB11l
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_c4854/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_c4854.dir/build.make CMakeFiles/cmTC_c4854.dir/build
+Building CXX object CMakeFiles/cmTC_c4854.dir/src.cxx.o
+/opt/homebrew/Cellar/llvm/16.0.6/bin/clang++ -DCOMPILER_HAS_HIDDEN_VISIBILITY  -O3 -flto  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics   -fvisibility=hidden -MD -MT CMakeFiles/cmTC_c4854.dir/src.cxx.o -MF CMakeFiles/cmTC_c4854.dir/src.cxx.o.d -o CMakeFiles/cmTC_c4854.dir/src.cxx.o -c /Users/keyneshdongol/Desktop/Polynomial_Operator/cmake-build-release/CMakeFiles/CMakeScratch/TryCompile-svB11l/src.cxx
+Linking CXX executable cmTC_c4854
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c4854.dir/link.txt --verbose=1
+/opt/homebrew/Cellar/llvm/16.0.6/bin/clang++ -O3 -flto  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names --verbose  CMakeFiles/cmTC_c4854.dir/src.cxx.o -o cmTC_c4854 
+Homebrew clang version 16.0.6
+Target: arm64-apple-darwin22.5.0
+Thread model: posix
+InstalledDir: /opt/homebrew/Cellar/llvm/16.0.6/bin
+ "/usr/bin/ld" -demangle -lto_library /opt/homebrew/Cellar/llvm/16.0.6/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 13.0.0 13.3 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk -o cmTC_c4854 -search_paths_first -headerpad_max_install_names CMakeFiles/cmTC_c4854.dir/src.cxx.o -lc++ -lSystem /opt/homebrew/Cellar/llvm/16.0.6/lib/clang/16/lib/darwin/libclang_rt.osx.a
+
+
+Source file was:
+int main() { return 0; }
+
+Performing C++ SOURCE FILE Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY succeeded with the following output:
+Change Dir: /Users/keyneshdongol/Desktop/Polynomial_Operator/cmake-build-release/CMakeFiles/CMakeScratch/TryCompile-joSAe1
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_068fa/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_068fa.dir/build.make CMakeFiles/cmTC_068fa.dir/build
+Building CXX object CMakeFiles/cmTC_068fa.dir/src.cxx.o
+/opt/homebrew/Cellar/llvm/16.0.6/bin/clang++ -DCOMPILER_HAS_HIDDEN_INLINE_VISIBILITY  -O3 -flto  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics   -fvisibility-inlines-hidden -MD -MT CMakeFiles/cmTC_068fa.dir/src.cxx.o -MF CMakeFiles/cmTC_068fa.dir/src.cxx.o.d -o CMakeFiles/cmTC_068fa.dir/src.cxx.o -c /Users/keyneshdongol/Desktop/Polynomial_Operator/cmake-build-release/CMakeFiles/CMakeScratch/TryCompile-joSAe1/src.cxx
+Linking CXX executable cmTC_068fa
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_068fa.dir/link.txt --verbose=1
+/opt/homebrew/Cellar/llvm/16.0.6/bin/clang++ -O3 -flto  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names --verbose  CMakeFiles/cmTC_068fa.dir/src.cxx.o -o cmTC_068fa 
+Homebrew clang version 16.0.6
+Target: arm64-apple-darwin22.5.0
+Thread model: posix
+InstalledDir: /opt/homebrew/Cellar/llvm/16.0.6/bin
+ "/usr/bin/ld" -demangle -lto_library /opt/homebrew/Cellar/llvm/16.0.6/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 13.0.0 13.3 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk -o cmTC_068fa -search_paths_first -headerpad_max_install_names CMakeFiles/cmTC_068fa.dir/src.cxx.o -lc++ -lSystem /opt/homebrew/Cellar/llvm/16.0.6/lib/clang/16/lib/darwin/libclang_rt.osx.a
+
+
+Source file was:
+int main() { return 0; }
+
+Performing C++ SOURCE FILE Test COMPILER_HAS_DEPRECATED_ATTR succeeded with the following output:
+Change Dir: /Users/keyneshdongol/Desktop/Polynomial_Operator/cmake-build-release/CMakeFiles/CMakeScratch/TryCompile-eR5Ykq
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_ec059/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_ec059.dir/build.make CMakeFiles/cmTC_ec059.dir/build
+Building CXX object CMakeFiles/cmTC_ec059.dir/src.cxx.o
+/opt/homebrew/Cellar/llvm/16.0.6/bin/clang++ -DCOMPILER_HAS_DEPRECATED_ATTR  -O3 -flto  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_ec059.dir/src.cxx.o -MF CMakeFiles/cmTC_ec059.dir/src.cxx.o.d -o CMakeFiles/cmTC_ec059.dir/src.cxx.o -c /Users/keyneshdongol/Desktop/Polynomial_Operator/cmake-build-release/CMakeFiles/CMakeScratch/TryCompile-eR5Ykq/src.cxx
+[1m/Users/keyneshdongol/Desktop/Polynomial_Operator/cmake-build-release/CMakeFiles/CMakeScratch/TryCompile-eR5Ykq/src.cxx:2:25: [0m[0;1;35mwarning: [0m[1m'somefunc' is deprecated [-Wdeprecated-declarations][0m
+    int main() { return somefunc();}
+[0;1;32m                        ^
+[0m[1m/Users/keyneshdongol/Desktop/Polynomial_Operator/cmake-build-release/CMakeFiles/CMakeScratch/TryCompile-eR5Ykq/src.cxx:1:16: [0m[0;1;30mnote: [0m'somefunc' has been explicitly marked deprecated here[0m
+__attribute__((__deprecated__)) int somefunc() { return 0; }
+[0;1;32m               ^
+[0m1 warning generated.
+Linking CXX executable cmTC_ec059
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ec059.dir/link.txt --verbose=1
+/opt/homebrew/Cellar/llvm/16.0.6/bin/clang++ -O3 -flto  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names --verbose  CMakeFiles/cmTC_ec059.dir/src.cxx.o -o cmTC_ec059 
+Homebrew clang version 16.0.6
+Target: arm64-apple-darwin22.5.0
+Thread model: posix
+InstalledDir: /opt/homebrew/Cellar/llvm/16.0.6/bin
+ "/usr/bin/ld" -demangle -lto_library /opt/homebrew/Cellar/llvm/16.0.6/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 13.0.0 13.3 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk -o cmTC_ec059 -search_paths_first -headerpad_max_install_names CMakeFiles/cmTC_ec059.dir/src.cxx.o -lc++ -lSystem /opt/homebrew/Cellar/llvm/16.0.6/lib/clang/16/lib/darwin/libclang_rt.osx.a
+
+
+Source file was:
+__attribute__((__deprecated__)) int somefunc() { return 0; }
+    int main() { return somefunc();}
+

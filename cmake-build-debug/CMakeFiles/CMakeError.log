@@ -1,0 +1,48 @@
+Determining if the function sgemm_ exists failed with the following output:
+Change Dir: /Users/keyneshdongol/Desktop/Polynomial_Operator/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-zhQxED
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_52842/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_52842.dir/build.make CMakeFiles/cmTC_52842.dir/build
+Building C object CMakeFiles/cmTC_52842.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_52842.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_52842.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_52842.dir/CheckFunctionExists.c.o -c /Users/keyneshdongol/Desktop/Polynomial_Operator/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-zhQxED/CheckFunctionExists.c
+Linking C executable cmTC_52842
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_52842.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_52842.dir/CheckFunctionExists.c.o -o cmTC_52842 
+Undefined symbols for architecture arm64:
+  "_sgemm_", referenced from:
+      _main in CheckFunctionExists.c.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_52842] Error 1
+make: *** [cmTC_52842/fast] Error 2
+
+
+
+Determining if the __fbufsize exist failed with the following output:
+Change Dir: /Users/keyneshdongol/Desktop/Polynomial_Operator/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-PvzWiN
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_65f81/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_65f81.dir/build.make CMakeFiles/cmTC_65f81.dir/build
+Building C object CMakeFiles/cmTC_65f81.dir/CheckSymbolExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_65f81.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_65f81.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_65f81.dir/CheckSymbolExists.c.o -c /Users/keyneshdongol/Desktop/Polynomial_Operator/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-PvzWiN/CheckSymbolExists.c
+[1m/Users/keyneshdongol/Desktop/Polynomial_Operator/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-PvzWiN/CheckSymbolExists.c:2:10: [0m[0;1;31mfatal error: [0m[1m'stdio_ext.h' file not found[0m
+#include <stdio_ext.h>
+[0;1;32m         ^~~~~~~~~~~~~
+[0m1 error generated.
+make[1]: *** [CMakeFiles/cmTC_65f81.dir/CheckSymbolExists.c.o] Error 1
+make: *** [cmTC_65f81/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <stdio_ext.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef __fbufsize
+  return ((int*)(&__fbufsize))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
